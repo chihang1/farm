@@ -4,10 +4,10 @@ from pymongo.server_api import ServerApi
 import asyncio
 from bson import ObjectId
 
-DB_URI = 'mongodb://localhost:27017' # 'mongodb://mircoservice-admin:nAfxTwZ7qPONmJGu@microservicecluster.tc5pte9.mongodb.net/?retryWrites=true&w=majority'
+DB_URI = 'mongodb+srv://farm-admin:0AVDhYfewlNgjFRq@hellomongo.v37cvu2.mongodb.net/?authSource=HelloMongo&authMechanism=SCRAM-SHA-1' # 'mongodb://localhost:27017'
 
 client = AsyncIOMotorClient(DB_URI, server_api=ServerApi('1'))
-database = client['TaskDB']
+database = client['FirstMongo']
 collection = database.get_collection('Task')
 
 def task_handler(task):
